@@ -1,0 +1,40 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json && npm run minify",
+    "dev": "ts-node src/index.ts",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "clean": "rimraf dist",
+    "minify": "node scripts/uglify.js"
+  },
+  "keywords": [],
+  "author": "Divyansh Pandey",
+  "contributors": [
+    {
+      "name": "Divyansh Pandey",
+      "url": "https://github.com/inevitableDivu"
+    }
+  ],
+  "license": "ISC",
+  "description": "A highly-configurable TypeScript logger scaffold",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0",
+    "uglify-js": "^3.19.3",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inevitableDivu/logger.git",
+    "directory": "logger"
+  }
+}
