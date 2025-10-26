@@ -66,7 +66,10 @@ import createLogger, { FileTransport, ConsoleTransport, simpleFormatter } from "
 
 // default logger (console transport)
 const log = createLogger("App");
-log.info("Server started", { port: 3000 });
+log.info("Server started", { port: 3000 }); // DATE_TIME INFO [App] Server started { port: 3000 }
+
+const dbLog = log.child("Database");
+dbLog.info("Connecting to database..."); // DATE_TIME INFO [App:Database] Connecting to database...
 ```
 
 ## API
