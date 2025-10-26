@@ -1,6 +1,6 @@
 import createLogger, { ConsoleTransport, FileTransport } from "../src";
 
-const logger = createLogger("Happi", {
+const logger = createLogger("My App", {
   transports: [new ConsoleTransport(), new FileTransport("logs/app.log")],
   level: "debug",
 }); // Optionally pass a feature name as a string, e.g. createLogger("App")
